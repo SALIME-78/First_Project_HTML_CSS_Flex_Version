@@ -1,0 +1,146 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/******************************** Styling header start **************************/
+header {
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    padding: 10px 60px 10px 40px; /* Add padding to the navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    z-index: 1000; /* Ensure the navigation bar is on top of other content */
+}
+
+.logo img {
+    height: 61px; /* Set the height of your logo as needed */
+    width: 43%;
+}
+
+.logo {
+    width: 25%;
+}
+
+.navigation {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.menu {
+    list-style: none;
+    padding-right: 0;
+    margin: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.menu li {
+    margin-left: 20px; /* Add spacing between menu items */
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(255, 206.05, 31.875);
+}
+
+.menu li:first-child:after {
+    content:"";
+    width:100%;
+    margin-top: 1px;
+    border-top: 2px solid rgb(255, 206.05, 31.875);
+    display: block;
+}
+
+.menu li:not(:first-child):after {
+    content:"";
+    width:0;
+    margin-top: 1px;
+    border-top: 2px solid rgb(255, 206.05, 31.875);
+    display: block;
+    transition: 0.6s;
+}
+
+.menu li:not(:first-child):hover:after {
+    width: 100%;
+}
+
+/******************************** Styling header end *************************************/
+
+/******************************** Styling home start *************************************/
+.home-container {
+    background-image: url(/images/home/overlay.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home h1 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: uppercase
+}
+.home p {
+    color: #fff;
+    font-size: 21px;
+    text-transform: capitalize;
+}
+.home .btn {
+    padding: 8px 15px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.home .btn:hover {
+    opacity: 0.7;
+    transition: 0.8s
+}
+
+.home .btn2 {
+    border: 1px solid rgb(255, 206.05, 31.875);
+    background-color: rgb(255, 206.05, 31.875)
+}
+/********** Home Section End ************/
