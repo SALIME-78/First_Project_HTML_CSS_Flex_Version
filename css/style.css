@@ -7,6 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
 /******************************** Styling header start **************************/
@@ -48,6 +49,7 @@ header {
     padding-right: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: end;
     align-items: center;
 }
@@ -144,3 +146,259 @@ header {
     background-color: rgb(255, 206.05, 31.875)
 }
 /********** Home Section End ************/
+
+/********** About Section Start ************/
+.about {
+    padding: 80px 40px;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .common-header-style {
+      text-align: center;
+  }
+  
+  .common-title-style {
+      font-size: 38px;
+      font-weight: 600
+  }
+
+  .about-infos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+  }
+  
+  .about-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 30%;
+      border:1px solid  rgb(255, 206.05, 31.875);
+      padding: 30px 15px;
+  }
+  
+  .middle {
+     margin: 0 20px
+  }
+  
+  .about-info i {
+      color: rgb(255, 206.05, 31.875);
+      margin-bottom: 10px;
+      font-size: 30px
+  }
+  
+  .item-title-common {
+      text-transform: capitalize;
+      margin-bottom: 15px;
+      font-weight: 500
+  }
+  
+  .about-container p {
+      letter-spacing: 2px;
+      line-height: 22px;
+      margin-bottom: 15px;
+      color: #9f9f9f
+  }
+  
+  .about-info-url {
+      color: rgb(223.13, 174.18, 0);
+      text-transform: capitalize;
+  }
+  
+  .under-line {
+     display: block;
+     width: 100px;
+     height: 4px;
+     background-color: rgb(223.13, 174.18, 0);
+     margin: 5px auto 70px auto
+  }
+  
+  .common-hover {
+     position: relative;
+  }
+  
+  .common-hover:hover {
+     color: white;
+     transition: 0.7s
+  }
+  
+  .common-hover:after {
+     position: absolute;
+     content: "";
+     width: 0;
+     height: 0;
+     top:0;
+     left: 0;
+     background-color: #606060;
+  }
+  
+  .common-hover:hover:after {
+     width: 100%;
+     height: 100%;
+     transition: 1.4s;
+     z-index: -99;
+  }
+/*********** About Section End *************/
+
+/*********** Works Section Start ***********/
+.works {
+    background-color: #dfdfdf;
+    padding: 80px 0
+}
+
+.works-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.project{
+    width: 30%;
+    position: relative;
+    padding:20px;
+}
+
+.project img{
+    width: 100%;
+    height: 270px
+}
+
+.project .project-content{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    width:100%;
+    height:100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition:opacity 1s;
+}
+
+.project:hover .project-content{
+    opacity:1;
+    color: rgb(223.13, 174.18, 0);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    visibility: visible;
+}
+
+.project-content .project-infos{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.project-content.project-title {
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity 0.7s;
+    transition-delay: 0;
+}
+
+.project-desc{
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    top: 15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity 0.5s;
+    transition-delay: 0.4s;
+}
+
+.projects-content a  {
+    display: inline-block;
+    width:40px;
+    height: 40px;
+    position: relative;
+    top:15px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 1s ,opacity 0.5s;
+    transition-delay: 0.6s;
+}
+
+.project:hover .project-desc {
+   top:0;
+   opacity: 1;
+   visibility: visible;
+}
+
+.project-content a i{
+    line-height: 40px;
+    color: rgb(223.13, 174.18, 0);
+    font-size: 30px
+}
+/*********** Works Section End ************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 920px) {
+    .logo {
+        display: none;
+    }
+
+    .navigation {
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-info, .project {
+        width: 45%;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+
+    .about-info, .project {
+        width: 85%;
+        margin-bottom: 20px
+    }
+  }
+
+
+
+
+
