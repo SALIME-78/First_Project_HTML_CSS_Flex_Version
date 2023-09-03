@@ -87,7 +87,7 @@ header {
 
 /******************************** Styling home start *************************************/
 .home-container {
-    background-image: url(images/home/overlay.jpeg);
+    background-image: url(../images/home/overlay.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
